@@ -1,0 +1,32 @@
+​1. Planning and Requirement Analysis
+​This initial phase involves identifying the need for the application and defining its scope.
+​Project Goal: To develop a lightweight, web-based tool for personal organization.
+​Target Audience: Students and professionals who need a simple list-based interface.
+​Feasibility Study: We determined that a web-based approach is best for accessibility across devices. The project will utilize a relational database to ensure data is saved even after the session ends.
+​2. Defining Requirements
+​During this phase, we document exactly what the software must do. These are organized into a Software Requirement Specification (SRS).
+​Nomenclature: To maintain consistency, the primary data object is strictly referred to as a TaskItem.
+​Functional Requirements:
+​The system shall allow users to input text to create a new TaskItem.
+​The system shall display a chronological list of all saved TaskItems.
+​The system shall provide a mechanism to permanently remove a TaskItem.
+​Non-Functional Requirements: The system must be responsive (work on mobile) and have a minimalist interface.
+​3. Design
+​The design phase creates the blueprint for how the requirements will be met technically.
+​Architecture: We utilize the Model-View-Controller (MVC) pattern. The Model manages the data, the View handles the user interface, and the Controller manages the logic between them.
+​Database Schema: A table named TaskTable is designed with two specific columns: TaskID (a unique integer) and TaskContent (a string of characters).
+​Interface Design: The layout is planned as a single-page application (SPA) style to prevent unnecessary page reloads.
+​4. Implementation
+​This is the construction phase where the actual building occurs according to the design specifications.
+​Database Setup: The TaskTable is initialized based on the schema defined in the Design phase.
+​Logic Development: The "Controller" functions are written to handle the "Create" and "Delete" actions.
+​Nomenclature Synchronization: Developers ensure that the variable names in the background logic (e.g., current_task_item) match the terminology used in the database and the UI labels.
+​5. Testing
+​The implementation is verified against the original requirements to ensure quality.
+​Unit Testing: Verifying that the logic for adding a TaskItem correctly updates the database.
+​Integration Testing: Checking that the "Delete" button on the UI correctly communicates with the database to remove the right ID.
+​User Acceptance Testing (UAT): Confirming the interface is intuitive and that a user can complete their goal of managing a list without errors.
+​6. Deployment and Maintenance
+​The final phase involves releasing the software and keeping it functional.
+​Deployment: The project is pushed to a GitHub repository. The version is tagged as v1.0.0.
+​Maintenance: Monitoring for any issues where a TaskItem might not save correctly. Future updates (like adding "Due Dates") would begin the cycle again at the Planning phas
